@@ -13,6 +13,9 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require jquery3
+//= require popper
+//= require bootstrap
 //= require_tree .
 function popup(i) {
     document.querySelectorAll(".trigger_popup_fricc")[i].addEventListener('click',function(){

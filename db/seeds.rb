@@ -49,3 +49,8 @@ videos = Video.create({name: "Learn Animals", url: 'Animals-Deaf.mp4', playlist_
 # videos = Video.create({url: 'https://www.youtube.com/embed/g7mQGSx5lwY'}, playlist_id: 15)
 # videos = Video.create({url: 'https://www.youtube.com/embed/g7mQGSx5lwY'}, playlist_id: 16)
                                                                                                                           
+Playlist.destroy_all
+Playlist.create(name: 'Educational videos',description: "Enjoyable educational videos",level: '2-5',rating: 4,condition_id: 1,user_id: 1,image: "http://placehold.it/300x300")
+Playlist.create(name: 'Edu vid',description: "Enjoy educ videos",rating: 4,level: '2-5',condition_id: 1,user_id: 1,image: "http://placehold.it/300x300")
+Playlist.create(name: 'Educational videos',description: "Enjoyable educational videos",level: '2-5',rating: 4,condition_id: 1,user_id: 1,image: "http://placehold.it/300x300")
+Playlist.create(name: 'Edu vid',description: "Enjoy educ videos",rating: 4,level: '2-5',condition_id: 1,user_id: 1,image: "http://placehold.it/300x300")

@@ -3,5 +3,13 @@ module ApplicationHelper
     # def youtube_video(url)
     #   render :partial => 'shared/video', :locals => { :url => url }
     # end 
-  end
+  
 
+    def check(item)
+    if !Favorite.exists?(item.id);
+        Favorite.create(playlist_id: item.id, video: item.image);
+    else 
+        Favorite.where(playlist_id: item.id).destroy_all;
+        end 
+    end
+end

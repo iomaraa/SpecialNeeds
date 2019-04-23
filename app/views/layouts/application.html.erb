@@ -16,11 +16,14 @@
   <nav class="navbar" style="background-color: rgba(0, 110, 186, 0.46)">
 <img src="http://additionalneedsalliance.org.uk/wp-content/uploads/2017/01/disabled_kids.png" style="width: 150px" alt="Logo">
 <div class="float-left" >
+<%= link_to 'Home', root_path %>
 <% if current_user %>
 <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+<%= link_to 'Profile', profile_path(current_user.id) %>
 <% else %>
 <%= link_to 'Sign in', new_user_session_path %>
 <%= link_to 'Sign up', new_user_registration_path %>
+
 <% end %> 
 </div>
 </nav>
@@ -28,7 +31,8 @@
 
   <%= render 'layouts/alert' %> 
 
-  
+
+
     <%= yield %>
     
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

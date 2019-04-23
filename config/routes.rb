@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'playlists#index'
+  root 'first#index'
   resources :playlists
 resources :videos
   resources :profiles

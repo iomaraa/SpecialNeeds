@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'playlists#index'
   resources :playlists
-
+resources :videos
   resources :profiles
   devise_for :users
  

@@ -16,7 +16,7 @@
  @import 'bootstrap';
 
 
-.app{
+app{
   background-image: url("https://7551bdfc54adf45425bb-e1819ba959867bdb3382b3652a5f5ff1.ssl.cf5.rackcdn.com/animations/7b4/1446148934-Young_animation_holiday102815_03.gif");
   background-size: cover;
   background-repeat: no-repeat;
@@ -38,25 +38,21 @@
    border-radius: 4px;
 }
 .container {
-  margin-top :20px
+  margin-top :100px;
+  // text-align: center;
+//   margin-top: 100px ;  
+// margin-bottom: 50px;
+// display: flex;
+justify-content: flex-end;
+align-items: flex-end;
 }
-// .blind{
-//   width: 230px;
-//     height: 250px;
-//     border: 1px solid white;
-//     border-radius: -1px;
-//   }
-//   .Autism {
-//     width: 230px;
-//     height: 250px;
-//     border: 1px solid white;
-//     border-radius: 4px;
-//   }
-//   .Downsndrom{
-//      width: 230px;
-//     height: 250px;
-//     border: 1px solid white;
-//     border-radius: 4px;
-//   }
+body{
+  margin-bottom:10px;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.font{
+  float: left;
+}
 
 

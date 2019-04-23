@@ -1,0 +1,9 @@
+<h1>Videos</h1>
+
+
+    <% @videos.each do |video| %>
+<%= video_tag [video.url], :size => "600x450", :controls => true, :type => "video/mp4" %>
+<% end %>
+
+
+

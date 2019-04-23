@@ -1,0 +1,62 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+ */
+
+ @import 'bootstrap';
+
+
+.app{
+  background-image: url("https://7551bdfc54adf45425bb-e1819ba959867bdb3382b3652a5f5ff1.ssl.cf5.rackcdn.com/animations/7b4/1446148934-Young_animation_holiday102815_03.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+ 
+ .card-deck {
+ 
+    text-align: center;
+   margin:50PX 0PX 0px 0px; 
+    opacity:40;
+    top: 50%;
+     margin-top :160px
+  
+}
+.card-img-top{
+ width: 230px;
+ height: 250px;
+   border: 1px solid white;
+   border-radius: 4px;
+}
+.container {
+  margin-top :20px
+}
+// .blind{
+//   width: 230px;
+//     height: 250px;
+//     border: 1px solid white;
+//     border-radius: -1px;
+//   }
+//   .Autism {
+//     width: 230px;
+//     height: 250px;
+//     border: 1px solid white;
+//     border-radius: 4px;
+//   }
+//   .Downsndrom{
+//      width: 230px;
+//     height: 250px;
+//     border: 1px solid white;
+//     border-radius: 4px;
+//   }
+
+

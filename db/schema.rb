@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2019_04_22_084745) do
     t.string "playlist_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "video"
   end
 
   create_table "playlists", force: :cascade do |t|

@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+ .navbar > div > a {
+     margin: 5px;
+     text-decoration: none;
+     color: white;
+ }
+ 

@@ -4,12 +4,35 @@
     <title>NeedApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+ 
+  
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <nav class="navbar" style="background-color: rgba(0, 110, 186, 0.46)">
+<img src="http://additionalneedsalliance.org.uk/wp-content/uploads/2017/01/disabled_kids.png" style="width: 150px" alt="Logo">
+<div class="float-left" >
+<% if current_user %>
+<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+<% else %>
+<%= link_to 'Sign in', new_user_session_path %>
+<%= link_to 'Sign up', new_user_registration_path %>
+<% end %> 
+</div>
+</nav>
+
+
+  <%= render 'layouts/alert' %> 
+
+  
     <%= yield %>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
 </html>

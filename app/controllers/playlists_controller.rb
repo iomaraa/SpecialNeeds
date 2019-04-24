@@ -4,6 +4,7 @@ class PlaylistsController < ApplicationController
   end
 
   def show
+    @playlist = Playlist.find(params[:id])
   end
 
   def new
@@ -15,6 +16,13 @@ class PlaylistsController < ApplicationController
     puts "hi"
    p @playlist.errors.full_messages
     redirect_to playlists_path
+  end
+
+  def destroy
+    @playlist = Playlist.find(params[:id])
+    @playlist.destroy
+   
+    redirect_to profile_path(current_user.id)
   end
 
   private 

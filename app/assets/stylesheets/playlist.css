@@ -1,7 +1,7 @@
 /* Popup box BEGIN */
 .hover_bkgr_fricc{
     background:rgba(0,0,0,.4);
-    cursor:pointer;
+
     display:none;
     height:100%;
     position:fixed;
@@ -32,7 +32,7 @@
     background-color: #fff;
     border: 3px solid #999;
     border-radius: 50px;
-    cursor: pointer;
+    
     display: inline-block;
     font-family: arial;
     font-weight: bold;

@@ -7,15 +7,26 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     
- 
+ <link href="https://fonts.googleapis.com/css?family=Pangolin” rel=“stylesheet">
   
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+
+
+
   <nav class="navbar" style="background-color: rgba(0, 110, 186, 0.46)">
 <img src="http://additionalneedsalliance.org.uk/wp-content/uploads/2017/01/disabled_kids.png" style="width: 150px" alt="Logo">
+
+<div class="navTitle" >
+<h4>Edu-Tube </h4>
+
+<p>When all children can learn</p>
+</div>
+
 <div class="float-left" >
+
 <% if current_user %>
 <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
 <% else %>

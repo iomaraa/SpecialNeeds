@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root 'playlists#index'
+  get "/firsts" => "playlists#index"
+  get "/first" => "firsts#index"
+
   resources :playlists
-resources :videos
+  resources :videos
   resources :profiles
   devise_for :users
  

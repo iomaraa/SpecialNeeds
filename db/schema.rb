@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_23_092910) do
+ActiveRecord::Schema.define(version: 2019_04_23_174859) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,11 +22,15 @@ ActiveRecord::Schema.define(version: 2019_04_23_092910) do
   end
 
   create_table "favorites", force: :cascade do |t|
-    t.string "user_id"
-    t.string "playlist_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "video"
+    t.integer "user_id"
+  end
+
+  create_table "favorites_playlists", id: false, force: :cascade do |t|
+    t.bigint "favorite_id", null: false
+    t.bigint "playlist_id", null: false
   end
 
   create_table "playlists", force: :cascade do |t|
@@ -50,6 +54,9 @@ ActiveRecord::Schema.define(version: 2019_04_23_092910) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "admin", default: false
+    t.string "name"
+    t.string "username"
+    t.string "image"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

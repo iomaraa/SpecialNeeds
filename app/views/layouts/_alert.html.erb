@@ -1,4 +1,10 @@
-<div class="alert alert-success" role="alert">
-  <p   class="notice "><%= notice %></p>
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>">
+    <a href="#" data-dismiss="alert" class="close">×</a>
+    <ul>
+      <li>
+        <%= value %>
+      </li>
+    </ul>
   </div>
-<p class="alert"><%= alert %></p>
+<% end %>

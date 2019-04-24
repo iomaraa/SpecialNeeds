@@ -1,0 +1,77 @@
+ <div class="container text-center mt-5">
+ <div class="page-header header-filter" data-parallax="true" style="background-image:url('http://wallpapere.org/wp-content/uploads/2012/02/black-and-white-city-night.png');"></div>
+    <div class="main main-raised">
+		<div class="profile-content">
+            <div class="container">
+                <div class="row">
+	                <div class="col-md-6 ml-auto mr-auto">
+        	           <div class="profile">
+	                        <div class="avatar">
+	                            <img src="<%= @user.image %>" alt="Circle Image" class="img-raised rounded-circle img-fluid mb-4">
+	                        </div>
+	                        <div class="name">
+	                            <h3 class="title"><%= @user.name %></h3>
+								<h6><%= @user.username %></h6>
+								<a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
+                                <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
+                                <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
+	                        </div>
+	                    </div>
+    	            </div>
+                </div>
+
+
+
+<H1 class="text-center" style="text-decoration: none">My Uploads</h1>
+
+<%= link_to 'Add New', new_playlist_path, class: "btn btn-outline-info " %>
+
+<hr>
+<div class="card-deck">
+<% @playlist.each do |playlist| %>
+<%= link_to 'Destroy', playlist_path(playlist.id),
+                    method: :delete, data: { confirm: 'Are you sure?' } %>
+<div class="card border-success mb-3" style="max-width: 18rem;">
+<%= link_to  playlist.name , playlist_path(playlist.id) %>
+  <div class="card-header"></div>
+  <div class="card-body text-success">
+    <h5 class="card-title"><%= playlist.level %></h5>
+    <p class="card-text"><%= playlist.description %></p>
+  </div>
+</div>
+<% end %>
+</div>
+
+<div class="mt-5 ">
+<H1 class="text-center">Favorites</h1>
+<hr>
+<div class="card-deck">
+
+<% @user.favorites.each do |f| %>
+<% f.playlists.each do |p| %>
+ <div class="card" style="width: 18rem;">
+  <div class="card-body">
+
+    <h5 class="card-title"><%= p.name %></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><%= p.level %></h6>
+    <h6 class="card-subtitle mb-2 text-muted"><%= p.rating %></h6>
+    <p class="card-text"><%= p.description %></p>
+  </div>
+</div>
+<% end %>
+<% end %>
+</div>
+
+
+</div>
+</div> 
+
+
+
+
+
+
+
+    
+   
+               

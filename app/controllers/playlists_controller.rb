@@ -11,12 +11,14 @@ class PlaylistsController < ApplicationController
   end
 
   def create
-    playlist = Playlist.create(playlist_params)
+    @playlist = Playlist.create(playlist_params)
+    puts "hi"
+   p @playlist.errors.full_messages
     redirect_to playlists_path
   end
 
   private 
   def playlist_params
-    params.require(:playlist).permit(:name, :description, :rating, :level, :user_id, :image)
+    params.require(:playlist).permit(:name, :description, :rating, :level, :user_id, :condition_id, :image)
   end 
 end

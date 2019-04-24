@@ -24,19 +24,24 @@
 
 <H1 class="text-center">My Uploads</h1>
 <hr>
+<div class="card-deck">
 <% @playlist.each do |playlist| %>
 <div class="card border-success mb-3" style="max-width: 18rem;">
-  <div class="card-header"><%= playlist.name %></div>
+<%= link_to  playlist.name , playlist_path(playlist.id) %>
+  <div class="card-header"></div>
   <div class="card-body text-success">
     <h5 class="card-title"><%= playlist.level %></h5>
     <p class="card-text"><%= playlist.description %></p>
   </div>
 </div>
 <% end %>
+</div>
 
 <div class="mt-5 ">
 <H1 class="text-center">Favorites</h1>
 <hr>
+<div class="card-deck">
+
 <% @user.favorites.each do |f| %>
 <% f.playlists.each do |p| %>
  <div class="card" style="width: 18rem;">
@@ -50,6 +55,8 @@
 </div>
 <% end %>
 <% end %>
+</div>
+
 
 </div>
 </div> 

@@ -12,6 +12,7 @@
   <%= f.text_field :level %>
   <br>
   <%= f.hidden_field :user_id, :value => current_user.id %>
+  <%= f.hidden_field :condition_id, :value => 10%>
   <%= f.label :image %>
   <%= f.url_field :image %>
   <br>

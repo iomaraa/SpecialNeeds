@@ -1,0 +1,5 @@
+<%= form_for new_favorite_path(@favorite), method: :post do |f| %>
+  <%= hidden_field_tag :user_id, current_user.id%>
+  <%= hidden_field_tag :video, @playlist_name%>
+  <%= f.submit "ADD TO FAV", class: "btn btn-success ml-1" %>
+<% end %>

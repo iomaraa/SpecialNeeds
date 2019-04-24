@@ -1,2 +1,7 @@
 
 <%= render partial: 'card' %>
+
+
+<% @conditions.each do |c| %>
+<%= link_to c.name, condition_path(c) %>
+<% end %>

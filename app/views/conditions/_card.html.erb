@@ -1,0 +1,24 @@
+<div class='col-md-4 mt-5 col-sm-12'>
+    <h5><%= item.name %></h5>
+    <a class="trigger_popup_fricc" ><img src=<%= item.image %>></a>
+    <div class='row'>
+        <span class='col-md-6'>Level: <%= item.level.to_s %></span>
+        <span class='col-md-6'>Rating:<%= item.rating %>/5</span>
+    </div>
+</div>
+<div class="hover_bkgr_fricc">
+    <span class="helper"></span>
+    <div>
+        <div class="popupCloseButton">X</div>
+        <%= link_to  image_tag(item.image) , playlist_path(item.id) %>
+        <p><%= item.description %></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum possimus quam aliquam animi quas sit. Ratione quasi quibusdam, dolorem laboriosam itaque distinctio sed ipsa alias reiciendis odit, vitae in. Optio!</p>
+        <div class='row'>
+        <div class='col-7'></div>
+        <% @playlist_name = item.name%>
+    <%= render partial: 'form' %>
+        <button class='btn btn-success ml-1'>Rate</button>
+        </div>
+        <div></div>
+    </div>
+</div>

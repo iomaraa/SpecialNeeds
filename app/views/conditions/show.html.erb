@@ -1,2 +1,10 @@
-<h1>Conditions#show</h1>
-<p>Find me in app/views/conditions/show.html.erb</p>
+
+
+<h1 class='mt-5 text-center'><%= @condition.name %></h1>
+<div class='row text-center container-fluid mt-1'>
+<% @condition.playlists.each  do |item| %>
+  <div class='col-1'></div>
+  <%= render 'card',item: item %>
+  <div class='col-1'></div>
+<% end %>
+</div>

@@ -1,7 +1,13 @@
+
+<div class=" text-center">
+
 <% @playlist.videos.each do |item| %>
+<p class="lead">
 <%= item.name %>
+</p>
 <br>
 <%= video_tag [item.url], :size => "600x450", :controls => true, :type => "video/mp4" %>
 <br>
 <br>
 <% end %>
+</div>

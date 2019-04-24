@@ -1,4 +1,4 @@
-
+<br>
 <div class= "container" >
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -30,6 +30,7 @@
 </div>
 </div>
 <br><br>
+<div class="container text-center">
 <div class="breakline">
 <img src="https://www.la-maison-bleue.fr/sites/all/themes/custom/lmb/images/ribambelle.png" alt="breakline" height="80" width="900">
 
@@ -38,9 +39,9 @@
 <div class= "font" >
 <h5>About US</h5>
 <br>
-<p> We sought to create this interactive project for special needs kids to integrate fun in their learning. 
-This videos will help special needs kids to improve their knowledge by watching then learning.
- also, will help kids to met with their educational needs and facilitate learning and make it more helpful and effective.
+<p> We sought to create this interactive project for special needs kids to integrate fun in their learning.
+These videos will help special needs kids to improve their knowledge by watching then learning.
+Also, the videos will help kids to met with their educational needs make it more helpful and effective.
 </p>
 </div>
 <div class="breakline">
@@ -49,35 +50,27 @@ This videos will help special needs kids to improve their knowledge by watching 
 
 <br><br>
 
+
+<br><br>
 <div class="app">
  <div class="card-deck">
+<% @conditions.each do |c| %>
+
+
 
 <div class="card" >
-  <img class="card-img-top" src="https://us.123rf.com/450wm/lenm/lenm1802/lenm180200240/95966457-stock-illustration-illustration-of-a-kid-girl-outdoors-wearing-a-hearing-aid-in-her-ears.jpg?ver=6
+  <img class="card-img-top" src="<%= c.url %>"
 ">
-   <h5 class="card-title">Deaf Kids </h5>
-   <a href="#" class="btn btn-primary">Lets'Learn</a>
+   <h5 class="card-title"> <%= c.name %></h5>
+<%= link_to "Let's Learn", condition_path(c) , :class => "btn btn-primary" %>
  
 </div>
 
-<div class="card" >
-  <img class="card-img-top" src="https://previews.123rf.com/images/lenm/lenm0901/lenm090100030/4101945-lecture-en-braille-avec-chemin-de-d%C3%A9tourage.jpg">
-   <h5 class="card-title">Blind Kids </h5>
-      <a href="#" class="btn btn-primary">Lets'Learn</a>
-
-</div>
-
-<div class="card" >
-  <img class="card-img-top" src="https://previews.123rf.com/images/estherqueen999/estherqueen9991802/estherqueen999180200039/94781917-cute-cartoon-boy-with-autism-awareness-concept.jpg" >
-   <h5 class="card-title">Autism Kids </h5>
-      <a href="#" class="btn btn-primary">Lets'Learn</a>
-</div>
-
-<div class="card" >
-  <img class="card-img-top" src="http://pluspng.com/img-png/children-having-fun-at-school-png-cute-cartoon-funny-school-children-clip-art-images-kids-having-fun-at-school-png-400.png">
-   <h5 class="card-title">Down syndrome Kids </h5>
-      <a href="#" class="btn btn-primary">Lets'Learn</a>
-</div>
-
+<% end %>
 </div>
 </div>
+</div>
+<br>
+<br>
+<br>
+<br>

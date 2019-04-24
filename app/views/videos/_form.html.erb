@@ -1,0 +1,19 @@
+
+<div class="container" style="width: 400px">
+<div class="col-md-12 text-center ">
+<h2>Add New Video To <%= @playlist.name %> </h2>
+
+<%= form_for @video do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control" %>
+  <br>
+  <%= f.label :url %>
+  <%= f.text_field :url, class: "form-control" %>
+  <br>
+  <%= f.hidden_field :playlist_id, :value => @playlist.id %>
+
+<%= f.submit "Submit", class: "btn  btn-primary "  %>
+<% end %>
+</div>
+
+

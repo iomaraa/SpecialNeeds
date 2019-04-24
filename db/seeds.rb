@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+Condition.destroy_all
 autism = Condition.create(name: "Autism")
 deaf= Condition.create(name: "Hearing Loss")
 blind= Condition.create(name: "Blindness")
@@ -17,6 +17,6 @@ play2= Playlist.create(name: 'Edu vid',description: "Enjoy educ videos",rating: 
 play3= Playlist.create(name: 'Educational videos',description: "Enjoyable educational videos",level: '2-5',rating: 4,condition_id: down.id,user_id: 9,image: "http://placehold.it/300x300")
 play4= Playlist.create(name: 'Edu vid',description: "Enjoy educ videos",rating: 4,level: '2-5',condition_id: down.id,user_id: 8,image: "http://placehold.it/300x300")
 
-
+Favorite.destroy_all
 fav =Favorite.create(user_id: 8)
 fav.playlists << Playlist.create(name: 'Educational videos',description: "Enjoyable educational videos",level: '2-5',rating: 4,condition_id: down.id, user_id: 8,image: "http://placehold.it/300x300")

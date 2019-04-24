@@ -22,7 +22,10 @@
 
 
 
-<H1 class="text-center">My Uploads</h1>
+<H1 class="text-center" style="text-decoration: none">My Uploads</h1>
+
+<%= link_to 'Add New', new_playlist_path, class: "btn btn-outline-info " %>
+
 <hr>
 <div class="card-deck">
 <% @playlist.each do |playlist| %>

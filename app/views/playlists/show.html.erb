@@ -1,2 +1,7 @@
-<h1>Playlists#show</h1>
-<p>Find me in app/views/playlists/show.html.erb</p>
+<% @playlist.videos.each do |item| %>
+<%= item.name %>
+<br>
+<%= video_tag [item.url], :size => "600x450", :controls => true, :type => "video/mp4" %>
+<br>
+<br>
+<% end %>

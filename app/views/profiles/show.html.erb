@@ -26,6 +26,8 @@
 <hr>
 <div class="card-deck">
 <% @playlist.each do |playlist| %>
+<%= link_to 'Destroy', playlist_path(playlist.id),
+                    method: :delete, data: { confirm: 'Are you sure?' } %>
 <div class="card border-success mb-3" style="max-width: 18rem;">
 <%= link_to  playlist.name , playlist_path(playlist.id) %>
   <div class="card-header"></div>

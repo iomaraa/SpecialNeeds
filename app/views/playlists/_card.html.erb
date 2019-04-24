@@ -10,7 +10,7 @@
     <span class="helper"></span>
     <div>
         <div class="popupCloseButton">X</div>
-        <img src=<%= item.image %>>
+        <%= link_to  image_tag(item.image) , playlist_path(item.id) %>
         <p><%= item.description %></p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum possimus quam aliquam animi quas sit. Ratione quasi quibusdam, dolorem laboriosam itaque distinctio sed ipsa alias reiciendis odit, vitae in. Optio!</p>
         <div class='row'>
